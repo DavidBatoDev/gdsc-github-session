@@ -11,20 +11,28 @@ def display_ascii_art(text):
     return text2art(text)
 
 
-def get_user_input():
-    name = input("Enter name: ")
-    age = input("Enter Age: ")
-    address = input("Enter Address: ")
-    age = int(age)
-    return name, age, address
+def get_info():
+    full_name = 'David E. Bato-bato'
+    course_name = 'Bachelor of Science in Computer Engineering'
+    year = '1st year'
+    section = '1-5'
+    phrase = "Let's Go Software Development Team"
+    return full_name, course_name, year, section, phrase
+    
 
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    name, age, address = get_user_input()
-    ascii_art = display_ascii_art(f"Hello, {name.split()[0]}!")
+    full_name, course_name, year, section, phrase = get_info()
+    ascii_art = display_ascii_art(f"GDSC-PUP")
     return render_template(
-        "result.html", name=name, age=2023 - age, address=address, ascii_art=ascii_art
+        "result.html",
+        full_name=full_name,
+        course_name=course_name,
+        year=year,
+        section=section,
+        phrase=phrase,
+        ascii_art=ascii_art,
     )
 
 
