@@ -15,7 +15,7 @@ def get_info():
     full_name = 'David E. Bato-bato'
     course_name = 'Bachelor of Science in Computer Engineering'
     year = '1st year'
-    section = '1-5'
+    section = '1-4'
     phrase = "Let's Go Software Development Team"
     return full_name, course_name, year, section, phrase
     
